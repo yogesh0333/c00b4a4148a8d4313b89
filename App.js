@@ -1,12 +1,21 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View>
-        <Text> Welcome </Text>
-      </View>
-    );
-  }
+import DisplayList from './src/DisplayList';
+import FetchList from './src/FetchList';
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="FetchList" headerMode="none">
+        <Stack.Screen name="FetchList" component={FetchList} />
+        <Stack.Screen name="DisplayList" component={DisplayList} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
+
+export default App;
