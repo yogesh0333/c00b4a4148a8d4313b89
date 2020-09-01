@@ -60,7 +60,7 @@ export default class DisplayFetch extends Component {
   BottomView = () => {
     return (
       <View>
-        {this.state.fetchingStatus ? <ActivityIndicator size="large" color="blue" style={{ marginLeft: 6 }} /> : null}
+        {this.state.fetchingStatus ? <ActivityIndicator size="large" color="blue" style={styles.footerLoader} /> : null}
       </View>
     );
   };

@@ -32,4 +32,8 @@ export const styles = StyleSheet.create({
     alignSelf: 'center',
     fontSize: 16,
   },
+  footerLoader: {
+    alignSelf: 'center',
+    margin: 10,
+  },
 });
