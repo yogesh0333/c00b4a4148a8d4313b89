@@ -57,6 +57,13 @@ export default class DisplayFetch extends Component {
       </View>
     );
   };
+  BottomView = () => {
+    return (
+      <View>
+        {this.state.fetchingStatus ? <ActivityIndicator size="large" color="blue" style={{ marginLeft: 6 }} /> : null}
+      </View>
+    );
+  };
   render() {
     return (
       <View style={styles.container}>
@@ -150,6 +157,7 @@ export default class DisplayFetch extends Component {
                 </View>
               )}
               showsVerticalScrollIndicator={true}
+              ListFooterComponent={this.BottomView}
             />
           </View>
         )}
