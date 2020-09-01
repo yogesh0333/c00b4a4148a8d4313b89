@@ -19,7 +19,7 @@ export default class DisplayFetch extends Component {
 
   componentDidMount() {
     this.fetchData();
-    this._interval = setInterval(() => {
+    this.fetchDataAfterPeriod = setInterval(() => {
       this.fetchData();
     }, 10000);
   }
